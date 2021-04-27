@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import useHooks from "../hooks/index";
+import useHooks from "@/hooks/index";
 
-import { getMonster } from "../data/monster";
+import { getMonster } from "@/data/monster";
 
 function Home() {
   let [id, setId] = useState(1);
