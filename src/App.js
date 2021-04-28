@@ -1,8 +1,6 @@
 import Home from "@/pages/Home";
 import Page404 from "@/pages/Page404";
 
-import RemoteData from "@/pages/RemoteData";
-
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -13,9 +11,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/remote-data">
-            <RemoteData />
           </Route>
           <Route path="*">
             <Page404 />
