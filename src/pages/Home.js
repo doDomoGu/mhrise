@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import useHooks from "@/hooks/index";
+// import useHooks from "@/hooks/index";
 
 import { getMonster } from "@/data/monster";
 
 function Home() {
   let [id, setId] = useState(1);
+  let [data, setData] = useState({});
 
-  const data = useHooks(getMonster, id);
+  useEffect(() => {
+    setData(getMonster(id));
+    // });
+  }, [id]);
+
+  // const data = useHooks(getMonster, id);
   return (
     <div>
       <div>home</div>
@@ -17,16 +23,14 @@ function Home() {
             setId(1);
           }}
         >
-          {" "}
-          1{" "}
-        </span>{" "}
+          1
+        </span>
         <span
           onClick={() => {
             setId(2);
           }}
         >
-          {" "}
-          2{" "}
+          2
         </span>
       </div>
       <div>
