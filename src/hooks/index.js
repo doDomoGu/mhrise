@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
 function useHooks(func, params) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({});
 
   useEffect(() => {
-    console.log(7);
-    console.log("use effect");
-    console.log(func);
-    console.log(params);
+    // console.log(7);
+    // console.log("use effect");
+    // console.log(func);
+    // console.log(params);
     (async () => {
       let _data;
       if (params !== null) {
@@ -16,6 +16,7 @@ function useHooks(func, params) {
         _data = await func();
       }
       setData(_data);
+      //22
     })();
     // });
   }, [func, params]);

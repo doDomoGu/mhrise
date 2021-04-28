@@ -8,17 +8,30 @@ function Home() {
   let [id, setId] = useState(1);
 
   const data = useHooks(getMonster, id);
-
   return (
     <div>
-      <div
-        onClick={() => {
-          setId(id);
-        }}
-      >
-        home
+      <div>home</div>
+      <div>
+        <span
+          onClick={() => {
+            setId(1);
+          }}
+        >
+          {" "}
+          1{" "}
+        </span>{" "}
+        <span
+          onClick={() => {
+            setId(2);
+          }}
+        >
+          {" "}
+          2{" "}
+        </span>
       </div>
-      <div>{data}</div>
+      <div>
+        {id} - {data.name}
+      </div>
     </div>
   );
 }

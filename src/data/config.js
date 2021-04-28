@@ -1,3 +1,3 @@
-const isLocalData = false;
+const isLocalData = true;
 
 export { isLocalData };
