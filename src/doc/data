@@ -1,0 +1,40 @@
+
+地图 map
+	名称 name
+	图片 picture
+	地图项目 map_item
+		类型 : 采矿  mine / 骸骨 bone / 特产 specialty / 钓鱼 fish / 垃圾场 rubbish / 龙巢 nest / 采集 collection / 鬼火鸟 / 环境生物 environment
+		图标 / 标识
+		等级
+		物品 : 对应物品ID (多个)
+		金钱/炎火点数 
+
+任务 quest
+	标题 title
+	类型 普通 / 关键 / 紧急
+	种类 采集 / 讨伐 / 狩猎
+	地图 mapId
+	时间
+	报酬 z
+	订单 ?
+	失败条件
+	主要任务 
+	目标怪物   怪物ID (多个)
+	乱入怪物
+
+怪物 monster
+	名字 name
+	类型/种类： 牙兽种 / 鸟龙种 / 古龙种  等等
+	素材名称（前缀)
+	最终登场 : 最后在哪一作登场 
+
+
+武器 weapon
+	
+	武器操作 weapon_operation
+
+防具 armor
+
+物品 item
+
+	类型：

@@ -1,13 +1,19 @@
 import { isLocalData } from "./config";
-import ApiMonster from "../api/monster";
+// import ApiMonster from "../api/monster";
 import localDataMonster from "@/data/monster.json";
 
-function getMonster(id) {
+function getMonsterList() {
+  return localDataMonster;
+}
+
+function getMonsterById(id) {
   if (isLocalData) {
-    return localDataMonster[id];
+    return localDataMonster.find((e) => {
+      return e.id === id;
+    });
   } else {
-    return ApiMonster.getMonster({ id });
+    // return ApiMonster.getMonster({ id });
   }
 }
 
-export { getMonster };
+export { getMonsterList, getMonsterById };
