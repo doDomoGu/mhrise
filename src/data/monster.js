@@ -16,4 +16,14 @@ function getMonsterById(id) {
   }
 }
 
-export { getMonsterList, getMonsterById };
+function getMonsterByName(name) {
+  if (isLocalData) {
+    return localDataMonster.find((e) => {
+      return e.name === name;
+    });
+  } else {
+    // return ApiMonster.getMonster({ id });
+  }
+}
+
+export { getMonsterList, getMonsterById, getMonsterByName };

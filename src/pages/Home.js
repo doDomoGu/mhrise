@@ -2,19 +2,19 @@ import React, { useState, useEffect } from "react";
 
 // import useHooks from "@/hooks/index";
 
-import { getMonsterList, getMonsterById } from "@/data/monster";
+import { getMonsterList, getMonsterByName } from "@/data/monster";
 
 function Home() {
   let list = getMonsterList();
 
-  let [id, setId] = useState(1);
+  let [name, setName] = useState("青熊兽");
 
   let [item, setItem] = useState({});
 
   useEffect(() => {
-    setItem(getMonsterById(id));
+    setItem(getMonsterByName(name));
     // });
-  }, [id]);
+  }, [name]);
 
   // const data = useHooks(getMonster, id);
 
@@ -22,12 +22,12 @@ function Home() {
   for (let item of list) {
     clickList.push(
       <span
-        key={item.id}
+        key={item.name}
         onClick={() => {
-          setId(item.id);
+          setName(item.name);
         }}
       >
-        {item.id}
+        {item.name}
       </span>
     );
   }
@@ -36,9 +36,7 @@ function Home() {
     <div>
       <div>home</div>
       <div>{clickList}</div>
-      <div>
-        {item.id} - {item.name}
-      </div>
+      <div>{item.name}</div>
     </div>
   );
 }
