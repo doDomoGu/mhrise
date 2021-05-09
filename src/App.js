@@ -1,3 +1,5 @@
+import MainLayout from "@/pages/layouts/Main";
+
 import Home from "@/pages/Home";
 import Item from "@/pages/Item";
 import Map from "@/pages/Map";
@@ -9,9 +11,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <div>App</div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <MainLayout>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/item/:title" component={Item} />
@@ -19,8 +20,8 @@ function App() {
           <Route path="/monster/:title" component={Monster} />
           <Route path="*" component={Page404} />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 

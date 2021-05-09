@@ -1,43 +1,24 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-// import useHooks from "@/hooks/index";
+// import { getMonsterList } from "@/data/monster";
 
-import { getMonsterList, getMonsterByName } from "@/data/monster";
+// import Button from "react-bootstrap/Button";
+// import Jumbotron from "react-bootstrap/Jumbotron";
+// import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import MonsterList from "@/pages/home/MonsterList";
 
 function Home() {
-  let list = getMonsterList();
-
-  let [name, setName] = useState("青熊兽");
-
-  let [item, setItem] = useState({});
-
-  useEffect(() => {
-    setItem(getMonsterByName(name));
-    // });
-  }, [name]);
-
-  // const data = useHooks(getMonster, id);
-
-  let clickList = [];
-  for (let item of list) {
-    clickList.push(
-      <span
-        key={item.name}
-        onClick={() => {
-          setName(item.name);
-        }}
-      >
-        {item.name}
-      </span>
-    );
-  }
-
   return (
-    <div>
-      <div>home</div>
-      <div>{clickList}</div>
-      <div>{item.name}</div>
-    </div>
+    <Row>
+      <Col>
+        <MonsterList></MonsterList>
+      </Col>
+      <Col>2 of 3</Col>
+      <Col>3 of 3</Col>
+    </Row>
   );
 }
 
