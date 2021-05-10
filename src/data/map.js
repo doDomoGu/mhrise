@@ -6,7 +6,7 @@ _.getList = () => {
   return data;
 };
 
-_.getOneByTitle = (title) => {
+_.getOne = (title) => {
   return data.find((e) => {
     return e.title === title;
   });
