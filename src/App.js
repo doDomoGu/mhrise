@@ -1,10 +1,9 @@
 import MainLayout from "@/pages/layouts/Main";
 
-import Home from "@/pages/Home";
-import Item from "@/pages/Item";
-import Map from "@/pages/Map";
-import Monster from "@/pages/Monster";
-
+import PageHome from "@/pages/Home";
+import PageItem from "@/pages/Item";
+import PageMap from "@/pages/Map";
+import PageMonster from "@/pages/Monster";
 import Page404 from "@/pages/Page404";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -14,10 +13,10 @@ function App() {
     <BrowserRouter>
       <MainLayout>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/item/:title" component={Item} />
-          <Route path="/map/:title" component={Map} />
-          <Route path="/monster/:title" component={Monster} />
+          <Route exact path="/" component={PageHome} />
+          <Route path="/item/:title" component={PageItem} />
+          <Route path="/map/:title" component={PageMap} />
+          <Route path="/monster/:name" component={PageMonster} />
           <Route path="*" component={Page404} />
         </Switch>
       </MainLayout>

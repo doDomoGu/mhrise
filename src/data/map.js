@@ -1,4 +1,4 @@
-import data from "@/json/monster";
+import data from "@/json/map";
 
 let _ = {};
 
@@ -6,9 +6,9 @@ _.getList = () => {
   return data;
 };
 
-_.getOne = (name) => {
+_.getOneByTitle = (title) => {
   return data.find((e) => {
-    return e.name === name;
+    return e.title === title;
   });
 };
 

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
-import { getMonsterByName } from "@/data/monster";
+import dataMonster from "@/data/monster";
 
-function Map() {
-  const { title } = useParams();
+function Monster() {
+  const { name } = useParams();
 
   let [monster, setMonster] = useState({});
 
   useEffect(() => {
-    setMonster(getMonsterByName(title));
-  }, [title]);
+    setMonster(dataMonster.getOne(name));
+  }, [name]);
 
   let history = useHistory();
 
@@ -27,4 +27,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default Monster;

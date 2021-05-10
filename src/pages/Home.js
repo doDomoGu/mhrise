@@ -8,15 +8,18 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import MonsterList from "@/pages/home/MonsterList";
+import Monster from "@/pages/home/Monster";
+import Map from "@/pages/home/Map";
 
 function Home() {
   return (
     <Row>
       <Col>
-        <MonsterList></MonsterList>
+        <Monster></Monster>
       </Col>
-      <Col>2 of 3</Col>
+      <Col>
+        <Map></Map>
+      </Col>
       <Col>3 of 3</Col>
     </Row>
   );
