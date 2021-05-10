@@ -1,26 +1,35 @@
-// import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
-// import Card from "react-bootstrap/Card";
+import { useParams } from "react-router-dom";
+import turnTo404 from "@/utils/turnTo404";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import dataMonster from "@/data/monster";
+
+import Title from "./monster/Title";
+import Sider from "./monster/Sider";
 
 function Monster() {
   const { name } = useParams();
 
   const monster = dataMonster.getOne(name);
 
-  let history = useHistory();
-
   if (typeof monster === "undefined") {
-    history.push("/404");
-    history.go();
+    turnTo404();
   }
 
   return (
-    <div>
-      <div>monster</div>
-      <div>{monster.name}</div>
-    </div>
+    <Container>
+      <Row>
+        <Col md={8}>
+          <Title data={monster}></Title>
+        </Col>
+        <Col md={4}>
+          <Sider></Sider>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
