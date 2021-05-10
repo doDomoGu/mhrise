@@ -10,6 +10,7 @@ import Col from "react-bootstrap/Col";
 
 import Monster from "@/pages/home/Monster";
 import Map from "@/pages/home/Map";
+import Weapon from "@/pages/home/Weapon";
 
 function Home() {
   return (
@@ -20,7 +21,9 @@ function Home() {
       <Col>
         <Map></Map>
       </Col>
-      <Col>3 of 3</Col>
+      <Col>
+        <Weapon></Weapon>
+      </Col>
     </Row>
   );
 }
