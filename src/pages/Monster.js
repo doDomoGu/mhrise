@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 import dataMonster from "@/data/monster";
 
 import Title from "./monster/Title";
+import Weakness from "./monster/Weakness";
 import Sider from "./monster/Sider";
 
 function Monster() {
@@ -20,16 +21,15 @@ function Monster() {
   }
 
   return (
-    <Container>
-      <Row>
-        <Col md={8}>
-          <Title data={monster}></Title>
-        </Col>
-        <Col md={4}>
-          <Sider></Sider>
-        </Col>
-      </Row>
-    </Container>
+    <Row>
+      <Col md={8}>
+        <Title data={monster}></Title>
+        <Weakness data={monster}></Weakness>
+      </Col>
+      <Col md={4}>
+        <Sider></Sider>
+      </Col>
+    </Row>
   );
 }
 

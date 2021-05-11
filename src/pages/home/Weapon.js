@@ -15,7 +15,7 @@ function Weapon() {
   });
 
   return (
-    <Card>
+    <Card className="border-0">
       <Card.Body className="p-0">
         <Card.Title className="bg-dark text-light p-2">武器列表</Card.Title>
         <Card.Text className="p-2">{links}</Card.Text>
