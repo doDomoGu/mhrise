@@ -3,17 +3,17 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 
-import "./Header.css";
+import "./Footer.css";
 
-function Header() {
+function Footer() {
   return (
     <Container>
-      <header>
+      <footer>
         <Link to="/">home </Link>
-        this is header
-      </header>
+        this is footer
+      </footer>
     </Container>
   );
 }
 
-export default Header;
+export default Footer;

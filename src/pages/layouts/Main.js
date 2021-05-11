@@ -3,14 +3,18 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 function Main(props) {
   return (
     <>
       <Header></Header>
-      <div className="bg-secondary p-3">
-        <Container className="bg-white py-2">{props.children}</Container>
-      </div>
+      <section className="bg-secondary">
+        <Container>
+          <section className="py-3 bg-secondary">{props.children}</section>
+        </Container>
+      </section>
+      <Footer></Footer>
     </>
   );
 }
