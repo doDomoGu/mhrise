@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 function Weakness(props) {
   return (
-    <Card border="light" text="dark">
+    <Card className="border-0">
       <Card.Body className="p-0">
         <Card.Title className="bg-dark text-light p-2">
           怪物弱点部位及属性

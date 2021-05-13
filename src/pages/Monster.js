@@ -5,7 +5,7 @@ import turnTo404 from "@/utils/turnTo404";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import dataMonster from "@/data/monster";
+import MonsterModel from "@model/monster";
 
 import Title from "./monster/Title";
 import Weakness from "./monster/Weakness";
@@ -14,7 +14,7 @@ import Sider from "./monster/Sider";
 function Monster() {
   const { name } = useParams();
 
-  const monster = dataMonster.getOne(name);
+  const monster = MonsterModel.getOne(name);
 
   if (typeof monster === "undefined") {
     turnTo404();
@@ -23,8 +23,12 @@ function Monster() {
   return (
     <Row>
       <Col md={8}>
-        <Title data={monster} className="py-3"></Title>
-        <Weakness data={monster}></Weakness>
+        <div className="pb-3">
+          <Title data={monster}></Title>
+        </div>
+        <div className="pb-3">
+          <Weakness data={monster}></Weakness>
+        </div>
       </Col>
       <Col md={4}>
         <Sider></Sider>

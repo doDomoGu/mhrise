@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
 
-import dataMonster from "@/data/monster";
+import MonsterModel from "@model/monster";
 
 function Monster() {
-  const list = dataMonster.getList();
+  const list = MonsterModel.getList();
 
   let links = [];
   list.forEach((v) => {

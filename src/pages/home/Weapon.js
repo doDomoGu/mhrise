@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
 
-import weaponData from "@/data/weapon";
+import WeaponModel from "@model/weapon";
 
 function Weapon() {
-  const list = weaponData.getList();
+  const list = WeaponModel.getList();
 
   let links = [];
   list.forEach((v) => {

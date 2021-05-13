@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
 
-import mapData from "@/data/map";
+import MapModel from "@model/map";
 
 function Map() {
-  const list = mapData.getList();
+  const list = MapModel.getList();
 
   let links = [];
   list.forEach((v) => {
