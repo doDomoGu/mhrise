@@ -1,4 +1,4 @@
-import data from "@data|json/map";
+import data from "@{data/json}/map";
 
 let _ = {};
 

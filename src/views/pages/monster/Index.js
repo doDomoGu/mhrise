@@ -5,11 +5,11 @@ import turnTo404 from "@/utils/turnTo404";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import MonsterModel from "@model/monster";
+import MonsterModel from "@{model}/monster";
 
-import Title from "./monster/Title";
-import Weakness from "./monster/Weakness";
-import Sider from "./monster/Sider";
+import Title from "./Title";
+import Weakness from "./Weakness";
+import Sider from "./Sider";
 
 function Monster() {
   const { name } = useParams();

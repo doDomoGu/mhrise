@@ -1,4 +1,4 @@
-import data from "@data|json/monster";
+import data from "@{data/json}/monster";
 
 let _ = {};
 

@@ -1,15 +1,15 @@
 import Card from "react-bootstrap/Card";
 
-import MonsterModel from "@model/monster";
+import WeaponModel from "@{model}/weapon";
 
-function Monster() {
-  const list = MonsterModel.getList();
+function Weapon() {
+  const list = WeaponModel.getList();
 
   let links = [];
   list.forEach((v) => {
     links.push(
-      <Card.Link key={v.name} href={"/monster/" + v.name}>
-        {v.name}
+      <Card.Link key={v.title} href={"/weapon/" + v.title}>
+        {v.title}
       </Card.Link>
     );
   });
@@ -17,11 +17,11 @@ function Monster() {
   return (
     <Card className="border-0">
       <Card.Body className="p-0">
-        <Card.Title className="bg-dark text-light p-2">怪物列表</Card.Title>
+        <Card.Title className="bg-dark text-light p-2">武器列表</Card.Title>
         <Card.Text className="p-2">{links}</Card.Text>
       </Card.Body>
     </Card>
   );
 }
 
-export default Monster;
+export default Weapon;

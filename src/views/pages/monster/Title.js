@@ -5,8 +5,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Title(props) {
-  const image = require(`@data|images/` + props.data.image).default;
-  console.log(image);
+  let image;
+  if (props.data.image != null) {
+    image = require(`@{data/images}/` + props.data.image).default;
+  } else {
+    image = null;
+  }
+
   return (
     <Card className="border-0">
       <Card.Body className="p-0">

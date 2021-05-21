@@ -8,9 +8,9 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Monster from "@/pages/home/Monster";
-import Map from "@/pages/home/Map";
-import Weapon from "@/pages/home/Weapon";
+import Monster from "./Monster";
+import Map from "./Map";
+import Weapon from "./Weapon";
 
 function Home() {
   return (

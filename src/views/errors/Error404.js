@@ -1,7 +1,7 @@
 import React from "react";
 
-function Page404() {
-  console.log("page 404");
+function Error404() {
+  console.log("not found 404");
   return (
     <div>
       <div>404</div>
@@ -9,4 +9,4 @@ function Page404() {
   );
 }
 
-export default Page404;
+export default Error404;
