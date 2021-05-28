@@ -5,11 +5,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Title(props) {
-  let image;
+  let image = null;
   if (props.data.image != null) {
     image = require(`@{data/images}/` + props.data.image).default;
-  } else {
-    image = null;
   }
 
   return (
